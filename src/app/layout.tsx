@@ -12,6 +12,7 @@ export const metadata: Metadata = {
   title: "sSwapping | Links",
   description:
     "All my social links in one spot! Follow along for updates, fun content, and more across my favorite platforms.",
+  themeColor: "#2778ab",
 };
 
 export default function RootLayout({
