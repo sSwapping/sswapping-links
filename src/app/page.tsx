@@ -36,7 +36,8 @@ export default function Home() {
               delaySpeed={5000}
             />
           </div>
-          <div className='mt-6 mx-3 md:mx-10 md:h-[30rem] rounded-lg text-neutral-200 flex-grow-0 h-[22rem] overflow-auto scroll-smooth scrollbar-thin scrollbar-thumb-[#0f0] dark:scrollbar-thumb-gray-400 scrollbar-track-transparent'>
+          {/* [mask-image:linear-gradient(to_right,transparent,black_10%,black_90%,transparent)] */}
+          <div className='mt-6 mx-3 md:mx-10 md:h-[30rem] rounded-lg text-neutral-200 flex-grow-0 h-[22rem] overflow-auto scrollbar-thin scrollbar-thumb-[#0f0] dark:scrollbar-thumb-gray-400 scrollbar-track-transparent [mask-image:linear-gradient(to_bottom,transparent,black_10%,black_90%,transparent)] py-4 '>
             <div className='flex items-center justify-center'>
               <ul className='flex flex-col gap-2 place-items-center lg:ml-2'>
                 {LinksStore.map((link, i) => (
