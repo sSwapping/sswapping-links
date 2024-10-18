@@ -4,6 +4,7 @@ import { LinksStore } from "@/stores/linksStore";
 import Image from "next/image";
 import { Typewriter } from "react-simple-typewriter";
 import MatrixRaining from "@/components/MatrixRaining";
+import { IconContext } from "react-icons";
 
 export default function Home() {
   return (
@@ -31,21 +32,27 @@ export default function Home() {
               delaySpeed={5000}
             />
           </div>
-          <div className='mt-6 mx-3 md:mx-10 md:h-[30rem] rounded-lg text-neutral-200 flex-grow-0 h-[22rem] overflow-auto overscroll-auto scroll-smooth'>
+          <div className='mt-6 mx-3 md:mx-10 md:h-[30rem] rounded-lg text-neutral-200 flex-grow-0 h-[22rem] overflow-auto scroll-smooth scrollbar-thin scrollbar-thumb-[#0f0] dark:scrollbar-thumb-gray-400 scrollbar-track-transparent'>
             <div className='flex items-center justify-center'>
-              <ul className='flex flex-col gap-2'>
+              <ul className='flex flex-col gap-2 place-items-center lg:ml-2'>
                 {LinksStore.map((link, i) => (
                   <li
                     key={i}
-                    className='w-full h-full border rounded-lg card bg-clip-padding backdrop-filter backdrop-blur-3xl bg-opacity-10 border-neutral-800/70 hover:bg-opacity-30 text-neutral-200/80 hover:text-neutral-200 hover:bg-green-700/10'
+                    className='w-full h-full border rounded-lg card bg-clip-padding backdrop-filter backdrop-blur-3xl bg-opacity-10 border-neutral-800/70 hover:bg-opacity-30 text-neutral-200/80 hover:text-neutral-200 hover:bg-green-700/10 dark:hover:bg-neutral-700/20'
                   >
                     <a
                       href={link.href}
-                      className='flex items-center w-full gap-10 p-5 hover:text-green-200'
+                      className='flex items-center w-full gap-10 p-5 hover:text-green-200 dark:hover:text-neutral-100'
                       target='_blank'
                       rel='noopener noreferrer'
                     >
-                      <span>{link.icon}</span>
+                      <span>
+                        <IconContext.Provider
+                          value={{ className: "h-6 w-6 md:h-8 md:w-8" }}
+                        >
+                          {link.icon}
+                        </IconContext.Provider>
+                      </span>
                       <p className='text-base/relaxed lg:text-lg/relaxed'>
                         {link.title}
                       </p>

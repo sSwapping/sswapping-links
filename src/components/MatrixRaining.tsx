@@ -54,7 +54,7 @@ const MatrixRaining = () => {
       ctx.fillStyle = "rgba(10, 10, 10, 0.04)";
       ctx.fillRect(0, 0, width, height);
 
-      isDark ? (ctx.fillStyle = "#a3a3a3") : (ctx.fillStyle = "#0f0");
+      isDark ? (ctx.fillStyle = "#525252") : (ctx.fillStyle = "#0f0");
 
       ctx.font = "15px monospace";
       for (let i = 0; i < drops.length; i++) {
