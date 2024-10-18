@@ -62,7 +62,7 @@ const MatrixRaining = () => {
 
       // isDark ? {ctx.fillStyle = "#525252"} : (ctx.fillStyle = "#0f0");
 
-      ctx.font = "15px monospace";
+      ctx.font = "20px monospace";
       for (let i = 0; i < drops.length; i++) {
         const text = charArray[Math.floor(Math.random() * charArray.length)];
         ctx.fillText(text, i * 20, drops[i] * 20);
