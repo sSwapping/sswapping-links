@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Roboto } from "next/font/google";
 import { ThemeProvider } from "@/components/theme-provider";
+import type { Viewport } from "next";
 import "./globals.css";
 
 const roboto = Roboto({
@@ -16,6 +17,13 @@ export const metadata: Metadata = {
     siteName: "sSwapping's Social Links",
     url: "https://links.sswapping.dev/",
   },
+  twitter: {
+    title: "sSwapping's Social Links",
+  },
+  creator: "sSwapping / Jeffrey Dohmen",
+};
+
+export const viewport: Viewport = {
   themeColor: "#2778ab",
 };
 
