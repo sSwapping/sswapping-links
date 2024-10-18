@@ -3,8 +3,12 @@ import Avatar from "@/assets/images/avatar.png";
 import { LinksStore } from "@/stores/linksStore";
 import Image from "next/image";
 import { Typewriter } from "react-simple-typewriter";
-import MatrixRaining from "@/components/MatrixRaining";
 import { IconContext } from "react-icons";
+import dynamic from "next/dynamic";
+
+const MatrixRaining = dynamic(() => import("@/components/MatrixRaining"), {
+  ssr: false,
+});
 
 export default function Home() {
   return (

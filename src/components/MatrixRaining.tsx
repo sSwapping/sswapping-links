@@ -1,5 +1,5 @@
 "use client";
-import { useEffect, useRef, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 
 const useThemeDetector = () => {
   // Helper function to check if the user's system prefers dark mode
@@ -54,7 +54,13 @@ const MatrixRaining = () => {
       ctx.fillStyle = "rgba(10, 10, 10, 0.04)";
       ctx.fillRect(0, 0, width, height);
 
-      isDark ? (ctx.fillStyle = "#525252") : (ctx.fillStyle = "#0f0");
+      if (isDark) {
+        ctx.fillStyle = "#525252";
+      } else {
+        ctx.fillStyle = "#0f0";
+      }
+
+      // isDark ? {ctx.fillStyle = "#525252"} : (ctx.fillStyle = "#0f0");
 
       ctx.font = "15px monospace";
       for (let i = 0; i < drops.length; i++) {
@@ -106,7 +112,7 @@ const MatrixRaining = () => {
         window.removeEventListener("resize", handleResize);
       }
     };
-  }, []);
+  });
 
   return (
     <canvas className='fixed matrix-canvas -z-10' ref={canvasRef}></canvas>
