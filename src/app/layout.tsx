@@ -12,6 +12,10 @@ export const metadata: Metadata = {
   title: "sSwapping | Links",
   description:
     "All my social links in one spot! Follow along for updates, fun content, and more across my favorite platforms.",
+  openGraph: {
+    siteName: "sSwapping's Social Links",
+    url: "https://links.sswapping.dev/",
+  },
   themeColor: "#2778ab",
 };
 
