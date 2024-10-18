@@ -5,3 +5,8 @@
 body {
   @apply bg-neutral-950;
 }
+
+.card {
+  /* other styles */
+  background: rgba(39, 39, 39, 0.1);
+}
