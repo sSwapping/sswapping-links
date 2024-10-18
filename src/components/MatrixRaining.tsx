@@ -46,7 +46,7 @@ const MatrixRaining = () => {
       drops[i] = 1;
     }
 
-    let frameRate = 30;
+    const frameRate = 30;
     let lastFrameTime = Date.now();
 
     // Function to draw the matrix rain effect
