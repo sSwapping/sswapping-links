@@ -23,11 +23,11 @@ export default function Home() {
                 alt='Avatar'
                 width={128}
                 height={128}
-                className='w-16 h-16 mt-6 rounded-full sm:h-18 sm:w-18 md:h-20 md:w-20 lg:h-24 lg:w-24 xl:h-28 xl:w-28 2xl:h-32 2xl:w-32 md:mt-12'
+                className='w-16 h-16 mt-6 rounded-full sm:h-18 sm:w-18 md:h-20 md:w-20 lg:h-24 lg:w-24 md:mt-12'
               />
             </div>
           </div>
-          <div className='mt-4 text-base font-bold text-center md:text-xl lg:text-2xl xl:text-3xl 2xl:text-4xl text-neutral-200'>
+          <div className='mt-4 text-base font-bold text-center md:text-xl lg:text-2xl text-neutral-200'>
             <Typewriter
               words={["@sSwapping"]}
               loop={0}
@@ -40,7 +40,7 @@ export default function Home() {
           </div>
           <div className='mx-3 mt-6 sm:mx-6 md:mx-8 lg:mx-10 xl:mx-12 2xl:mx-16 h-[60vh] rounded-lg text-neutral-200 overflow-auto scrollbar-thin scrollbar-thumb-[#0f0] dark:scrollbar-thumb-gray-400 scrollbar-track-transparent [mask-image:linear-gradient(to_bottom,transparent,black_10%,black_90%,transparent)] py-4'>
             <div className='flex items-center justify-center'>
-              <ul className='flex flex-col w-full max-w-3xl gap-2 px-4 sm:px-6 md:px-8 lg:px-10 xl:px-12 2xl:px-16 2xl:py-6'>
+              <ul className='flex flex-col w-full max-w-3xl gap-2 px-4 sm:px-6 md:px-8 lg:px-10 xl:px-12 2xl:px-16'>
                 {LinksStore.map((link, i) => (
                   <li
                     key={i}

@@ -38,7 +38,8 @@ const MatrixRaining = () => {
     let width = (canvas.width = window.innerWidth);
     let height = (canvas.height = window.innerHeight);
     let columns = Math.floor(width / 1);
-    const characters = "qwertyuiopasdfghjklzxcvbnm1234567890@#$%&";
+    const characters =
+      "きゅだえるとやういおぷあすどふぐはじけるずくしぶべんむ四五六七八九零あっとしゃぷどるぱーせんとあんど";
     const charArray = characters.split("");
     let drops: number[] = [];
 
@@ -60,7 +61,6 @@ const MatrixRaining = () => {
         ctx.fillStyle = "#0f0";
       }
 
-      // isDark ? {ctx.fillStyle = "#525252"} : (ctx.fillStyle = "#0f0");
 
       ctx.font = "20px monospace";
       for (let i = 0; i < drops.length; i++) {
