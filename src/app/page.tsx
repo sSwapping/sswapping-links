@@ -26,7 +26,7 @@ export default function Home() {
                 className='w-20 h-20 rounded-full sm:w-24 sm:h-24 md:w-28 md:h-28'
               />
             </div>
-            <div className='mt-4 text-base text-lg font-bold text-center sm:text-lg md:text-xl xl:text-2xl text-neutral-200'>
+            <div className='mt-4 text-base font-bold text-center sm:text-lg md:text-xl xl:text-2xl text-neutral-200'>
               <Typewriter
                 words={["@sSwapping"]}
                 loop={0}
