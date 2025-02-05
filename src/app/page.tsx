@@ -14,55 +14,52 @@ export default function Home() {
   return (
     <div className='flex items-center justify-center h-screen overflow-hidden'>
       <MatrixRaining />
-      <div className='my-8 sm:my-12 md:my-16 lg:my-20 xl:my-24 2xl:my-32'>
-        <div className='h-full border rounded-md w-[90vw] sm:w-[80vw] md:w-[70vw] lg:w-[60vw] xl:w-[50vw] 2xl:w-[40vw] max-w-7xl card backdrop-blur-sm bg-opacity-10 border-neutral-800/70 shadow shadow-neutral-900'>
-          <div className='flex items-center justify-center'>
+      <div className='w-auto'>
+        <div className='border rounded-md w-[320px] sm:w-[400px] md:w-[480px] lg:w-[560px] xl:w-[640px] 2xl:w-[720px] card backdrop-blur-sm bg-opacity-10 border-neutral-800/70 shadow shadow-neutral-900'>
+          <div className='flex flex-col items-center justify-center py-6 sm:py-8 md:py-10'>
             <div>
               <Image
                 src={Avatar}
                 alt='Avatar'
                 width={128}
                 height={128}
-                className='w-16 h-16 mt-6 rounded-full sm:h-18 sm:w-18 md:h-20 md:w-20 lg:h-24 lg:w-24 md:mt-12'
+                className='w-20 h-20 rounded-full sm:w-24 sm:h-24 md:w-28 md:h-28'
               />
             </div>
-          </div>
-          <div className='mt-4 text-base font-bold text-center md:text-xl lg:text-2xl text-neutral-200'>
-            <Typewriter
-              words={["@sSwapping"]}
-              loop={0}
-              cursor
-              cursorStyle='_'
-              typeSpeed={100}
-              deleteSpeed={100}
-              delaySpeed={5000}
-            />
-          </div>
-          <div className='mx-3 mt-6 sm:mx-6 md:mx-8 lg:mx-10 xl:mx-12 2xl:mx-16 h-[60vh] rounded-lg text-neutral-200 overflow-auto scrollbar-thin scrollbar-thumb-[#0f0] dark:scrollbar-thumb-gray-400 scrollbar-track-transparent [mask-image:linear-gradient(to_bottom,transparent,black_10%,black_90%,transparent)] py-4'>
-            <div className='flex items-center justify-center'>
-              <ul className='flex flex-col w-full max-w-3xl gap-2 px-4 sm:px-6 md:px-8 lg:px-10 xl:px-12 2xl:px-16'>
+            <div className='mt-4 text-base text-lg font-bold text-center sm:text-lg md:text-xl xl:text-2xl text-neutral-200'>
+              <Typewriter
+                words={["@sSwapping"]}
+                loop={0}
+                cursor
+                cursorStyle='_'
+                typeSpeed={100}
+                deleteSpeed={100}
+                delaySpeed={5000}
+              />
+            </div>
+            <div className='w-full mt-6 md:mt-8 max-h-[60vh] rounded-lg text-neutral-200 overflow-y-auto scrollbar-thin scrollbar-thumb-[#0f0] dark:scrollbar-thumb-gray-400 scrollbar-track-transparent [mask-image:linear-gradient(to_bottom,transparent,black_10%,black_90%,transparent)] py-4'>
+              <ul className='flex flex-col items-center gap-2 px-4 sm:px-6 md:px-8 lg:px-10'>
                 {LinksStore.map((link, i) => (
                   <li
                     key={i}
-                    className='w-full mx-auto transition-all duration-300 border rounded-lg sm:w-11/12 md:w-5/6 lg:w-3/4 xl:w-2/3 2xl:w-1/2 card bg-clip-padding backdrop-filter backdrop-blur-3xl bg-opacity-10 border-neutral-800/70 hover:bg-opacity-30 text-neutral-200/80 hover:text-neutral-200 hover:bg-green-700/10 dark:hover:bg-neutral-700/20'
+                    className='w-11/12 transition-all duration-300 border rounded-lg sm:w-5/6 md:w-3/4 lg:w-2/3 xl:w-1/2 card bg-clip-padding backdrop-filter backdrop-blur-3xl bg-opacity-10 border-neutral-800/70 hover:bg-opacity-30 text-neutral-200/80 hover:text-neutral-200 hover:bg-green-700/10 dark:hover:bg-neutral-700/20'
                   >
                     <a
                       href={link.href}
-                      className='flex items-center w-full gap-4 p-3 sm:gap-6 md:gap-8 lg:gap-10 sm:p-4 md:p-5 hover:text-green-200 dark:hover:text-neutral-100'
+                      className='flex items-center w-full gap-3 p-3 sm:p-3.5 md:p-4 xl:p-6 hover:text-green-200 dark:hover:text-neutral-100'
                       target='_blank'
                       rel='noopener noreferrer'
                     >
-                      <span>
+                      <span className='flex items-center justify-center w-6 h-6 sm:w-7 sm:h-7 md:w-8 md:h-8 xl:w-10 xl:h-10'>
                         <IconContext.Provider
                           value={{
-                            className:
-                              "h-4 w-4 sm:h-5 sm:w-5 md:h-6 md:w-6 lg:h-7 lg:w-7 xl:h-8 xl:w-8",
+                            className: "w-full h-full",
                           }}
                         >
                           {link.icon}
                         </IconContext.Provider>
                       </span>
-                      <p className='text-xs sm:text-sm md:text-base lg:text-lg xl:text-xl'>
+                      <p className='text-base sm:text-lg md:text-xl xl:text-2xl'>
                         {link.title}
                       </p>
                     </a>
